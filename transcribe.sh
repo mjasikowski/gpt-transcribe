@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# requirements:
-# whisper.cpp (https://github.com/ggerganov/whisper.cpp)
-# whisper model
-# a whisper tdrz model
-# ffmpeg
-# jq (brew install jq)
-
 whisper_path="/Users/michal/Documents/Tools/whisper.cpp/main"
 model_path="/Users/michal/Documents/Tools/whisper.cpp/models/ggml-small.en.bin"
 api_key="YOUR_OPENAI_API_KEY"
