@@ -9,7 +9,7 @@ Usage:
    - a whisper model
    - a whisper tdrz model
    - ffpmeg (available in homebrew)
-   - jq (available in homebrow)
+   - jq (available in homebrew)
 2. Get your OpenAI API key
 3. Configure the variables inside transcribe.sh
    - whisper_path: path to the `main` executable inside whisper.cpp
