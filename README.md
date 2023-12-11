@@ -8,7 +8,7 @@ Usage:
    - whisper.cpp
    - a whisper model
    - a whisper tdrz model
-   - ffpmeg (available in homebrew)
+   - ffmpeg (available in homebrew)
    - jq (available in homebrew)
 2. Get your OpenAI API key
 3. Configure the variables inside transcribe.sh
