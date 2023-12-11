@@ -15,6 +15,12 @@ if [ ! -d $1 ]; then
     exit 0
 fi
 
+lang=""
+
+if [ ! -z "$2" ]; then
+  lang="--language $2"
+fi
+
 if [ ! -d transcripts ]; then
     mkdir "$transcripts_folder"
 fi
@@ -25,7 +31,7 @@ for file in *.mp4; do
     if [ ! -e "$transcripts_folder/$basename.txt" ]; then
         ffmpeg -i "$file" -ar 16000 "$basename".wav
         #echo "Converted $file to $wav_file"
-        "$whisper_path" -of "$basename" -otxt -tdrz -m "$model_path" -f "$basename".wav
+        "$whisper_path" -of "$basename" -otxt -tdrz -m "$model_path" -f "$basename".wav $lang
         
         system_prompt=$(cat gptprompt)
         transcription=$(cat "$basename.txt")
