@@ -21,6 +21,9 @@ Usage:
 4. Tune the system prompt in `gptprompt` as you see fit
 5. Run the script: `bash transcribe.sh .`
 
+The default transcription and note language is English - if you wish to use a different one then you can specify it as the second parameter:
+`bash transcribe.sh . fr`
+
 Pro tip: You can record your calls to mp4 with OBS.
 
 This script was produced for personal during a sleepless evening, so it may contain errors.
