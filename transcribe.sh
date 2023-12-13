@@ -3,7 +3,7 @@
 whisper_path="/Users/michal/Documents/Tools/whisper.cpp/main"
 model_path="/Users/michal/Documents/Tools/whisper.cpp/models/ggml-small.en.bin"
 api_key="YOUR_OPENAI_API_KEY"
-gpt_model_id="gpt-3.5-turbo-1106"
+gpt_model_id="gpt-4-1106-preview"
 
 transcripts_folder="/Users/michal/Movies/transcripts"
 output_folder="/Users/michal/Documents/Notes/Temp"
@@ -24,8 +24,8 @@ fi
 if [ ! -d transcripts ]; then
     mkdir "$transcripts_folder"
 fi
-for file in *.mp4; do
-    basename="${file%.mp4}"
+for file in *.mp4 *.m4a *.mkv; do
+    basename="${file##*/}"
     dir_name="$(dirname $file)"
 
     if [ ! -e "$transcripts_folder/$basename.txt" ]; then
